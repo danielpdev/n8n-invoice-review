@@ -1,14 +1,14 @@
 {
   "mode": "fixture",
   "python": "3.12.13",
-  "recorded_at": "2026-10-31T13:50:41.252561+00:00",
-  "elapsed_seconds": 0.0173,
+  "recorded_at": "2026-10-31T13:57:08.655787+00:00",
+  "elapsed_seconds": 0.0181,
   "result": {
     "passed": true,
     "scenario": {
       "duplicate_same_id": true,
       "bad": {
-        "id": "08e6011f-b617-4334-afcf-9a077779ace4",
+        "id": "29f23a18-c9f6-481a-9c09-8058b60762f5",
         "invoice": {
           "number": "DEMO-43",
           "vendor": "Example Ltd",
