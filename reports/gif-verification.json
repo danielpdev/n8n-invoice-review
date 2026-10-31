@@ -1,0 +1,12 @@
+{
+  "source": "docs/demo.mp4",
+  "source_sha256": "bc0544d63614db9f0c4eef1f22497e9e69243dd917ea9ea1c41b0a361373b29b",
+  "gif_sha256": "54992d11843f689fc78ed7e2d008207f1d8c454232db57b600511c523a64235f",
+  "bytes": 346923,
+  "duration_seconds": 20.0,
+  "width": 1080,
+  "height": 676,
+  "frame_count": 40,
+  "caption": "Edited replay of captured CLI outputs in deterministic fixture mode. This is not live model inference.",
+  "excerpt": "Workflow explanation, actual demo output and evaluation output; test-only slides omitted"
+}

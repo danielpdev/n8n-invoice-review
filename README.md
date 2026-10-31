@@ -6,6 +6,12 @@ Duplicate-safe invoice intake, review and local archive.
 
 **Role focus:** n8n / Finance Operations Automation. **Status:** working local portfolio implementation, with synthetic data.
 
+## Demo
+
+![How n8n Invoice Review works](docs/demo.gif)
+
+Edited replay of captured CLI outputs in deterministic fixture mode. This is not live model inference. [Full recording](docs/demo.mp4). Rebuild with `./scripts/render_gif.sh` (FFmpeg required).
+
 ## The engineering decision
 
 n8n submits an invoice into a durable review queue. Vendor plus invoice number detect duplicates. Integer cents validate totals. A separate explicit operator approval archives the invoice transactionally.
