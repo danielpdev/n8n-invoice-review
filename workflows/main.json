@@ -1,0 +1,90 @@
+{
+  "id": "n8ninvoicereview",
+  "name": "n8n-invoice-review / synthetic demonstration",
+  "nodes": [
+    {
+      "id": "651c8807-c8a8-4aac-b124-2fca9c917eda",
+      "name": "Run demo",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        260
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "d9323e9d-3f76-426b-ad8e-9775f0fd2711",
+      "name": "Receive synthetic invoice",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        260
+      ],
+      "parameters": {
+        "url": "http://mock:8000/api/intake",
+        "method": "POST",
+        "options": {
+          "timeout": 10000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\"number\": \"DEMO-42\", \"vendor\": \"Example Ltd\", \"subtotal_cents\": 10000, \"tax_cents\": 2100, \"total_cents\": 12100}"
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1000
+    },
+    {
+      "id": "4e0ef137-63cc-4b46-8137-c42d07461920",
+      "name": "Inspect review queue",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        260
+      ],
+      "parameters": {
+        "url": "http://mock:8000/api/records",
+        "method": "GET",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1000
+    }
+  ],
+  "connections": {
+    "Run demo": {
+      "main": [
+        [
+          {
+            "node": "Receive synthetic invoice",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Receive synthetic invoice": {
+      "main": [
+        [
+          {
+            "node": "Inspect review queue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {},
+  "versionId": "ba1873cb-318e-4ebc-8de1-1049afd8359d"
+}

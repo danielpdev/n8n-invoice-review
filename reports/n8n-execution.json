@@ -1,0 +1,89 @@
+{
+  "n8n_version": "2.45.7",
+  "image_digest": "sha256:9a8d8dcea75667496695d7810d7e1fe018a65efb36cc499d347f3931b3957b5d",
+  "status": "success",
+  "started_at": "2026-10-31T13:43:50.147Z",
+  "stopped_at": "2026-10-31T13:43:50.252Z",
+  "nodes": {
+    "Run demo": [
+      {
+        "status": "success",
+        "duration_ms": 4,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {},
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "Receive synthetic invoice": [
+      {
+        "status": "success",
+        "duration_ms": 91,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {
+                  "id": "2d686fe7-d4a3-48c2-9240-5d620b5d86bf",
+                  "invoice": {
+                    "number": "DEMO-42",
+                    "vendor": "Example Ltd",
+                    "subtotal_cents": 10000,
+                    "tax_cents": 2100,
+                    "total_cents": 12100
+                  },
+                  "fingerprint": "932ba96cdf631393991121aff601a89d24702ec487daca3bb18e2193b3794655",
+                  "status": "pending_review",
+                  "issues": [],
+                  "reviewer": null
+                },
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "Inspect review queue": [
+      {
+        "status": "success",
+        "duration_ms": 5,
+        "output": {
+          "main": [
+            [
+              {
+                "json": {
+                  "id": "2d686fe7-d4a3-48c2-9240-5d620b5d86bf",
+                  "invoice": {
+                    "number": "DEMO-42",
+                    "vendor": "Example Ltd",
+                    "subtotal_cents": 10000,
+                    "tax_cents": 2100,
+                    "total_cents": 12100
+                  },
+                  "fingerprint": "932ba96cdf631393991121aff601a89d24702ec487daca3bb18e2193b3794655",
+                  "status": "pending_review",
+                  "issues": [],
+                  "reviewer": null
+                },
+                "pairedItem": {
+                  "item": 0
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

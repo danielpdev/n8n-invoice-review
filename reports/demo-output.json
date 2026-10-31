@@ -1,0 +1,34 @@
+{
+  "mode": "fixture",
+  "python": "3.12.13",
+  "recorded_at": "2026-10-31T13:52:19.950870+00:00",
+  "elapsed_seconds": 0.02,
+  "result": {
+    "duplicate_same_id": true,
+    "bad": {
+      "id": "fbfd3b05-1cec-4c3d-8937-fe183388ea5e",
+      "invoice": {
+        "number": "DEMO-43",
+        "vendor": "Example Ltd",
+        "subtotal_cents": 10000,
+        "tax_cents": 2100,
+        "total_cents": 99999
+      },
+      "fingerprint": "685966ed7e858254c2081506eefe1b7a2c8cd1c5da942ebdf86617c50ceaf87e",
+      "status": "needs_correction",
+      "issues": [
+        "total mismatch"
+      ],
+      "reviewer": null
+    },
+    "archive": [
+      {
+        "number": "DEMO-42",
+        "vendor": "Example Ltd",
+        "subtotal_cents": 10000,
+        "tax_cents": 2100,
+        "total_cents": 12100
+      }
+    ]
+  }
+}
